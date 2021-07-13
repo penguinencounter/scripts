@@ -7,11 +7,11 @@ _highlight_unlit_block(b, orange_threshold, red_threshold) -> (
         particle('minecraft:dust 1 0 0 1', [block_x, block_y, block_z], 10, 0, 1, player());
     ), block_light(block_loc) <= red_threshold, (
         particle('minecraft:dust 1 1 0 1', [block_x, block_y, block_z], 10, 0, 1, player());
-    ));
+    ))
 );
 
 __on_tick()->(
     for(rect(x,y,z,20,20,20),(
         _highlight_unlit_block(_, 11, 7);
-    ));
+    ))
 )
