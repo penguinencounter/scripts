@@ -11,9 +11,13 @@ _highlight_unlit_block(b, orange_threshold, red_threshold) ->
     ));
 );
 
+tick_number = 0
 __on_tick() ->
 (
-    for(rect(x,y,z,20,20,20),(
-        _highlight_unlit_block(_, 11, 7);
-    ));
+    if(tick_number%40 == 0, (
+        for(rect(x,y,z,20,20,20),(
+            _highlight_unlit_block(_, 11, 7);
+        )))
+    );
+    tick_number += 1;
 );
