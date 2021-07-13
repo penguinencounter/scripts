@@ -14,6 +14,7 @@ _highlight_unlit_block(b, orange_threshold, red_threshold) ->
 );
 
 tick_number = 0;
+
 __on_tick() ->
 (
     if(tick_number%40 == 0, (
